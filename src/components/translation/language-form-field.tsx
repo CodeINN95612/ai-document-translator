@@ -1,5 +1,4 @@
-import { UseFormReturn } from "react-hook-form";
-import { TranslateDocumentFormFields } from "./translate-document-types";
+import { FieldPath, UseFormReturn } from "react-hook-form";
 import { FormControl, FormField, FormItem, FormLabel } from "../ui/form";
 import {
   Select,
@@ -11,12 +10,16 @@ import {
 
 export type Language = "es" | "en" | "de";
 
-export type LanguageFormFieldProps = {
-  form: UseFormReturn<TranslateDocumentFormFields, any, undefined>;
-  name: "originalLanguage" | "translationLanguage";
+export type LanguageFormFieldProps<
+  T extends { translationLanguage: string; originalLanguage: string }
+> = {
+  form: UseFormReturn<T, any, undefined>;
+  name: FieldPath<T>;
 };
 
-export function LanguageFormField(props: LanguageFormFieldProps) {
+export function LanguageFormField<
+  T extends { translationLanguage: string; originalLanguage: string }
+>(props: LanguageFormFieldProps<T>) {
   const { name, form } = props;
 
   return (
@@ -32,7 +35,6 @@ export function LanguageFormField(props: LanguageFormFieldProps) {
           </FormLabel>
           <Select
             onValueChange={(e) => {
-              console.log("changed");
               field.onChange(e);
             }}
           >

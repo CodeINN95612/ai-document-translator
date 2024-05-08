@@ -30,28 +30,24 @@ export class TranslateClient {
   }
 
   async translateText(text: string, from: string, to: string) {
-    const url = import.meta.env.VITE_AZURE_TRANSLATE_URL;
+    const url = `${import.meta.env.VITE_AZURE_TRANSLATE_URL}translate`;
     const key = import.meta.env.VITE_AZURE_TRANSLATE_KEY;
     const region = import.meta.env.VITE_AZURE_TRANSLATE_REGION;
 
     var request = [{ Text: text }];
-    var response = await axios.post<TranslationList>(
-      url + "translate",
-      request,
-      {
-        params: {
-          "api-version": "3.0",
-          from: from,
-          to: to,
-        },
-        headers: {
-          "Ocp-Apim-Subscription-Key": key,
-          "Ocp-Apim-Subscription-Region": region,
-          "Content-type": "application/json",
-        },
-      }
-    );
-    return response.data;
+    var response = await axios.post<TranslationList[]>(url, request, {
+      params: {
+        "api-version": "3.0",
+        to: to,
+        from: from,
+      },
+      headers: {
+        "Ocp-Apim-Subscription-Key": key,
+        "Ocp-Apim-Subscription-Region": region,
+        "Content-type": "application/json",
+      },
+    });
+    return response.data[0].translations[0].text;
   }
 
   async startTranslateDocumentsFromAzure(from: string, to: string) {

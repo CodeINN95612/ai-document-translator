@@ -36,7 +36,7 @@ export function TranslateDocumentForm(props: TranslateDocumentFormProps) {
             <Loader2 className="w-8 h-8 animate-spin" />
           </div>
         ) : (
-          <Button type="submit">Submit</Button>
+          <Button type="submit">Translate</Button>
         )}
       </form>
     </Form>

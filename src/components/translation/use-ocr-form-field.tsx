@@ -25,6 +25,7 @@ export function UseOcrFormField(props: UseOcrFormFieldProps) {
               checked={field.value}
               onCheckedChange={field.onChange}
               defaultChecked={false}
+              disabled
             />
           </FormControl>
           <div className="space-y-1 leading-none">
