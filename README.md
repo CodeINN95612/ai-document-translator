@@ -1,0 +1,30 @@
+# AI Document Translator
+
+Document translator using azure ai translation services.
+
+You need to define environment variables:
+
+```
+VITE_AZURE_MSAL_CLIENT_ID=""
+VITE_AZURE_MSAL_AUTHORITY_ID=""
+VITE_AZURE_MSAL_REDIRECT_URI="/"
+VITE_AZURE_MSAL_POST_LOGOUT_REDIRECT_URI="/"
+
+VITE_AZURE_STORAGE_ACCOUNT=""
+VITE_AZURE_STORAGE_SOURCE_CONTAINER=""
+VITE_AZURE_STORAGE_SOURCE_SAS=""
+VITE_AZURE_STORAGE_TARGET_CONTAINER=""
+VITE_AZURE_STORAGE_TARGET_SAS=""
+
+VITE_AZURE_TRANSLATE_URL="https://api.cognitive.microsofttranslator.com/"
+VITE_AZURE_TRANSLATE_DOCUMENTS_URL=""
+VITE_AZURE_TRANSLATE_KEY=""
+VITE_AZURE_TRANSLATE_REGION=""
+```
+
+## Execution
+
+```bash
+npm i
+npm run dev
+```
