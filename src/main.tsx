@@ -11,6 +11,7 @@ import { msalConfig } from "./authConfig";
 import { MsalProvider } from "@azure/msal-react";
 import { PublicClientApplication } from "@azure/msal-browser";
 import { LogOutPage } from "./pages/LogOutPage";
+import { OcrPage } from "./pages/OcrPage";
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/logout",
         element: <LogOutPage />,
+      },
+      {
+        path: "/ocr",
+        element: <OcrPage />,
       },
     ],
   },

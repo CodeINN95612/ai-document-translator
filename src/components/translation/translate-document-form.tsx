@@ -7,7 +7,6 @@ import {
 } from "./translate-document-types";
 import { LanguageFormField } from "./language-form-field";
 import { FileFormField } from "./file-form-field";
-import { UseOcrFormField } from "./use-ocr-form-field";
 import { Loader2 } from "lucide-react";
 
 export function TranslateDocumentForm(props: TranslateDocumentFormProps) {
@@ -29,7 +28,7 @@ export function TranslateDocumentForm(props: TranslateDocumentFormProps) {
             </div>
           </div>
           <FileFormField form={form} />
-          <UseOcrFormField form={form} />
+          {/* <UseOcrFormField form={form} /> */}
         </fieldset>
         {props.isLoading ? (
           <div className="flex justify-center">

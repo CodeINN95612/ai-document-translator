@@ -17,10 +17,6 @@ export function TranslateDocumentCard() {
   const onSubmit = (tr: TranslateDocumentFormFields) => {
     setIsLoading(true);
 
-    // translateClient
-    //   .translateText("Hola Amigos", "es", "en")
-    //   .then((t) => console.log(t));
-
     MakeTranslation(tr)
       .catch(() => {})
       .finally(() => setIsLoading(false));

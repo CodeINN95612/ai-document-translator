@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@azure-rest/ai-document-intelligence": "^1.0.0-beta.2",
+    "@azure/identity": "^4.2.0",
     "@azure/msal-browser": "^3.13.0",
     "@azure/msal-react": "^2.0.15",
     "@azure/storage-blob": "^12.17.0",
@@ -19,10 +21,13 @@
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@react-pdf/renderer": "^3.4.4",
     "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.376.0",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^4.0.13",
@@ -34,6 +39,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.7",
+    "@types/pdfkit": "^0.13.4",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
