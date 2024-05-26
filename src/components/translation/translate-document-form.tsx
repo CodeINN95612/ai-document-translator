@@ -29,7 +29,6 @@ export function TranslateDocumentForm(props: TranslateDocumentFormProps) {
             </div>
           </div>
           <FileFormField form={form} />
-          <UseOcrFormField form={form} />
         </fieldset>
         {props.isLoading ? (
           <div className="flex justify-center">

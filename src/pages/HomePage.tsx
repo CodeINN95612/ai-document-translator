@@ -6,9 +6,11 @@ export function HomePage() {
   return (
     <>
       <Header />
-      <main className="flex flex-wrap gap-6 justify-center ">
-        <TranslateDocumentCard />
+      <main className="px-6 grid gap-4">
         <TranslateTextCard />
+        <div className="flex">
+          <TranslateDocumentCard />
+        </div>
       </main>
     </>
   );

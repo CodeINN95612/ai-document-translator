@@ -18,6 +18,7 @@ export function TranslateTextCard() {
 
   const handleSubmit = (fields: TranslateTextFormFields) => {
     const { text, originalLanguage, translationLanguage } = fields;
+
     //Validate
     if (!text || !originalLanguage || !translationLanguage) {
       return;
@@ -34,12 +35,11 @@ export function TranslateTextCard() {
   };
 
   return (
-    <Card x-chunk="dashboard-06-chunk-0" className="">
+    <Card className="">
       <CardHeader>
         <CardTitle>Text Translator</CardTitle>
         <CardDescription>
-          Insert Text to be translated into any language with the click of a
-          button
+          Translate text into any language with the click of a button
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -47,6 +47,7 @@ export function TranslateTextCard() {
           isLoading={isLoading}
           onSubmit={handleSubmit}
           translatedText={translatedText}
+          onClear={() => setTranslatedText("")}
         />
       </CardContent>
     </Card>
