@@ -7,7 +7,6 @@ import {
 } from "./translate-document-types";
 import { LanguageFormField } from "./language-form-field";
 import { FileFormField } from "./file-form-field";
-import { UseOcrFormField } from "./use-ocr-form-field";
 import { Loader2 } from "lucide-react";
 
 export function TranslateDocumentForm(props: TranslateDocumentFormProps) {
